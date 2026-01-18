@@ -69,6 +69,10 @@ def is_person_in_crowd(known_face_path, crowd_image_path, tolerance: float = 0.6
 # Main function loops over images in a folder, checking for the known person
 def main():
     # Load image of known person
+    print("This program will check if a known person is in crowd images.")
+    print("The knows persons image will be compared against all images in a specified folder.")
+    print("Identified faces will be marked with a red box, others with a blue box.")
+    print("-" * 60)
     known_face_path = "me.jpg" # Path to the known person's image
     crowd_folder = "crowd_images" # Folder containing crowd images
     save_choice = input("Would you like to save the labeled images? (y/n): ")
