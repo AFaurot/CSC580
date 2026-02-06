@@ -7,8 +7,8 @@ from tensorflow.keras import layers
 
 
 # Environment / reproducibility
-np.random.seed(42)
-tf.random.set_seed(42)
+np.random.seed(580)
+tf.random.set_seed(580)
 
 # Better GPU behavior (I am using WSL + NVIDIA 4070 in Windows 11 env)
 gpus = tf.config.list_physical_devices("GPU")
@@ -162,7 +162,7 @@ bce = keras.losses.BinaryCrossentropy(from_logits=False)
 # It will be optimized by TensorFlow's autograph and run much faster as a result.
 # This is a very different approach than the template code where a combined_network was built with the following steps :
 
-# 1. compile discrimnator (trainable)
+# 1. compile discriminator (trainable)
 # 2. set discriminator.trainable = False
 # 3. compile generator (with discriminator as part of the model)
 # 4. set discriminator.trainable = True again for training the discriminator
